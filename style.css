@@ -1,0 +1,614 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --height-header: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+
+/* Header */
+#header {
+    height: var(--height-header);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#header.scrolled {
+    background-color: #000;
+}
+
+#header .logo a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav li {
+
+    width: 100px;
+    height: var(--height-header);
+    text-align: center;
+}
+
+#nav>li>a {
+    color: #fff;
+
+}
+
+#nav li a {
+    display: block;
+    line-height: var(--height-header);
+}
+
+#nav>li:hover>a {
+    background-color: grey;
+    color: black;
+}
+
+#nav .mobile-menu {
+    display: none;
+}
+
+#nav .nav-around {
+    font-size: 14px;
+}
+
+#nav .sub-nav {
+    display: none;
+    position: absolute;
+    top: var(--height-header);
+    width: 150px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .sub-nav {
+    display: block;
+}
+
+#nav .sub-nav li a {
+    width: 150px;
+    display: block;
+    color: #000;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+#nav .sub-nav li:hover a {
+    background-color: grey;
+    color: white;
+}
+
+#header .header-name {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 200px;
+}
+
+#header .header-name a {
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: var(--height-header);
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.avatar {
+    position: absolute;
+    border-radius: 50%;
+    width: 10%;
+    top: 20px;
+    right: 20px;
+    padding: .25%;
+    z-index: 2;
+    background-color: #E6EBE0;
+}
+
+
+
+
+/* Slider */
+
+#slider {
+
+    padding-top: 30%;
+    background-image: url('https://successcomputerconsulting.com/wp-content/uploads/2021/01/How-to-Enhance-Productivity-with-Microsoft-Power-Automate.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#slider .text-slider {
+    position: absolute;
+    color: #fff;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#slider .text-paragraph {
+    font-weight: 700;
+}
+
+/* Content */
+/* Content about */
+#content {
+    display: block;
+}
+
+#content .content-about {
+
+    max-width: 100%;
+    height: 600px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 64px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#content .about-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#content .about-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+
+#content .about-extra-heading {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+#content .about-paragraph {
+    width: 700px;
+    text-align: justify;
+    line-height: 1.4;
+    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+
+.content-gif .gif {
+    width: 300px;
+    height: 300px;
+}
+
+.content-gif .gif p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.content-gif .gif img {
+    width: 500px;
+    max-width: 100%;
+    height: 500px;
+    max-height: 100%;
+    border-radius: 20%;
+}
+
+/* Content tour */
+#content .content-tour {
+    height: 600px;
+    background-color: #000;
+    color: white;
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+.content-tour .tour-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+
+.content-tour .tour-extra-heading {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+
+
+.september,
+.october {
+    padding-left: 20px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.tour-table .sold-out {
+    display: block;
+    margin-left: 20px;
+    background-color: #f44336;
+    color: #fff;
+    width: 70px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.tour-table .november {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.tour-table .november .number {
+    width: 25px;
+    height: 23px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 23px;
+}
+
+#content .tour-address {
+    display: flex;
+    width: 770px;
+    max-width: 100%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#content .tour-address img {
+    width: 245px;
+    max-width: 100%;
+    height: 250px;
+    max-height: 100%;
+}
+
+#content .tour-address img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#content .tour-address .address {
+    position: relative;
+}
+
+#content .tour-address .address-box {
+    background-color: #fff;
+    position: absolute;
+    top: 250px;
+}
+
+.tour-address .text-heading,
+.tour-address .text-time,
+.tour-address .text-paragraph,
+.tour-address .button {
+    margin: 15px 20px;
+    color: #000;
+}
+
+.tour-address .text-heading {
+    font-size: 16px;
+}
+
+.tour-address .text-time {
+    opacity: 0.6;
+}
+
+.tour-address .text-paragraph {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.tour-address .address-box {
+    width: 245px;
+}
+
+.tour-address .button {
+    width: 100px;
+    height: 40px;
+    background-color: #000;
+    color: white;
+    font-weight: 550;
+    padding: none;
+    border: none;
+}
+
+.tour-address .button:hover {
+    background-color: gray;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+
+/* Content contact */
+#content .content-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.content-contact .contact-address {
+    margin-top: 20px;
+}
+
+
+.contact-address .text-heading,
+.contact-address .text-phone,
+.contact-address .text-email {
+    font-style: bold;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.contact-address i {
+    margin-right: 20px;
+}
+
+.content-contact .contact-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 100px 0 25px;
+}
+
+.content-contact .contact-extra-heading {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.content-contact .contact-container {
+    display: flex;
+    width: 770px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.contact-container .contact-input input {
+    height: 40px;
+    margin: 5px 0;
+    flex: 1;
+}
+
+.contact-container .input-message {
+    display: flex;
+}
+
+::placeholder {
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+.content-contact .contact-button {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.content-contact .contact-button .button {
+    background-color: #000;
+    color: #fff;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.content-contact .contact-button .button:hover {
+    background-color: gray;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+.content-contact .contact-background {
+    margin-top: 100px;
+    background-image: url('/assets/img/content/map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50%;
+}
+
+
+/* Footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .infomation p {
+    opacity: 0.6;
+    margin-top: 30px;
+}
+
+#footer .infomation a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.infomation .logo {
+    opacity: 0.6;
+    font-size: 25px;
+}
+
+.infomation .logo:hover {
+    opacity: 0.4;
+}
+
+
+
+/* model */
+.model {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.model.open {
+    display: flex;
+}
+
+.model-container {
+    width: 900px;
+    height: 500px;
+    background-color: #fff;
+    margin: 50px auto;
+    position: relative;
+    animation: model-translate ease 0.5s;
+}
+
+.model-header {
+    height: 130px;
+    background-color: #009688;
+}
+
+.model-header .header-close {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+}
+
+.model-header .header-close:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.model-header .header-tittle {
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.model-body {
+    margin: 15px;
+}
+
+.model-body .body-quantity input {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+.model-body .body-pay {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #009688;
+    color: #fff;
+}
+
+.model-body .body-pay:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.model-body .body-footer .footer-close {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background-color: #f44336;
+    position: absolute;
+    bottom: 20px;
+}
+
+.model-body .body-footer .footer-close:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.model-body .body-footer .footer-help {
+    float: right;
+    margin-top: 40px;
+}
+
+.model-body .body-footer .footer-help a {
+    text-decoration: underline;
+    color: #2196F3;
+}
+
+@keyframes model-translate {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
