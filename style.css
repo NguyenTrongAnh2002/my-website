@@ -461,7 +461,7 @@ li {
 
 .content-contact .contact-background {
     margin-top: 100px;
-    background-image: url('/assets/img/content/map.jpg');
+    background-image: url('map.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50%;
