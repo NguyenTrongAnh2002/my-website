@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import BrandComponent from "../components/Brand.vue";
-import FooterComponent from "../components/footer.vue";
+import FooterComponent from "../components/Footer.vue";
 
 import map from "../assets/img/bg/map.png";
 const backgrounds = ref([map]);

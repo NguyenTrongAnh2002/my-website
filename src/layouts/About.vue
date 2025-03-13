@@ -17,7 +17,7 @@ import about6 from "../assets/img/bg/about6.jpg";
 import about7 from "../assets/img/bg/about7.jpg";
 import about8 from "../assets/img/bg/about8.jpg";
 import about9 from "../assets/img/bg/about9.jpg";
-import Footer from "../components/footer.vue";
+import Footer from "../components/Footer.vue";
 const backgrounds = ref([heroBg_about]);
 const contents = ref([
   {

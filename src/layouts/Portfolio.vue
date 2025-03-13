@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import HeroComponent from "../components/Hero.vue";
 import BrandComponent from "../components/Brand.vue";
-import FooterComponent from "../components/footer.vue";
+import FooterComponent from "../components/Footer.vue";
 
 import heroBg_portfolio from "../assets/img/bg/bg-portfolio.jpg";
 import anh1 from "../assets/img/product/portfolio-1.jpg";
