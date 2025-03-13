@@ -7,7 +7,7 @@ import WrapperComponent from "../components/Wrapper.vue";
 import ClothingComponent from "../components/Clothing.vue";
 import SliderComponent from "../components/Slider.vue";
 import BrandComponent from "../components/Brand.vue";
-import FooterComponent from "../components/footer.vue";
+import FooterComponent from "../components/Footer.vue";
 
 import hero_bg1 from "../assets/img/bg/background-1.jpg";
 import hero_bg2 from "../assets/img/bg/background-2.jpg";
