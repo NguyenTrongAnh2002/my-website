@@ -3,7 +3,6 @@ import { ref } from "vue";
 import HeaderComponent from "../components/Header.vue";
 import HeroComponent from "../components/Hero.vue";
 import Brand from "../components/Brand.vue";
-import footer from "../components/footer.vue";
 
 import heroBg_about from "../assets/img/bg/bg-about.jpg";
 import bg_about1 from "../assets/img/bg/bg-wrapper.jpg";
