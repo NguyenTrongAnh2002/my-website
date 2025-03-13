@@ -2,7 +2,8 @@
 import { ref } from "vue";
 import HeaderComponent from "../components/Header.vue";
 import HeroComponent from "../components/Hero.vue";
-import Brand from "../components/Brand.vue";
+import BrandComponent from "../components/Brand.vue";
+import FooterComponent from "../components/Footer.vue";
 
 import heroBg_about from "../assets/img/bg/bg-about.jpg";
 import bg_about1 from "../assets/img/bg/bg-wrapper.jpg";
@@ -16,7 +17,7 @@ import about6 from "../assets/img/bg/about6.jpg";
 import about7 from "../assets/img/bg/about7.jpg";
 import about8 from "../assets/img/bg/about8.jpg";
 import about9 from "../assets/img/bg/about9.jpg";
-import Footer from "../components/Footer.vue";
+
 const backgrounds = ref([heroBg_about]);
 const contents = ref([
   {
@@ -452,8 +453,8 @@ const contents = ref([
     </div>
   </section>
 
-  <Brand />
-  <Footer />
+  <BrandComponent />
+  <FooterComponent />
 </template>
 
 <style scoped></style>

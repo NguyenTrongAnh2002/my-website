@@ -7,6 +7,6 @@
 
 <script setup>
 import Navbar from "./components/Header.vue";
-import Home from "./layouts/Home.vue";
-import About from "./layouts/About.vue";
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
 </script>

@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import RequestForm from "../components/RequestForm.vue";
-import HeaderComponent from "../components/Header.vue";
+
 import HeroComponent from "../components/Hero.vue";
 import WrapperComponent from "../components/Wrapper.vue";
 import ClothingComponent from "../components/Clothing.vue";
@@ -52,6 +51,4 @@ const isFormVisible = ref(false);
   <SliderComponent />
   <BrandComponent />
   <FooterComponent />
-
-  <RequestForm :isOpen="isFormVisible" @close-form="closeForm" />
 </template>
