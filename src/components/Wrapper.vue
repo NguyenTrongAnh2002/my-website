@@ -22,13 +22,13 @@
           as 50 pieces.
         </p>
         <button
-          class="bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 inline-block"
+          class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
         >
           GET IN TOUCH
         </button>
         <a
-          href=""
-          class="text-black px-6 py-3 ms-4 mt-3 border border-black rounded-lg text-lg hover:bg-blue-700 inline-block"
+          href="/about"
+          class="text-black px-6 py-3 ms-4 mt-3 border border-black rounded-lg text-lg hover:bg-black hover:text-white inline-block"
         >
           HOW TO START A BRAND
         </a>

@@ -1,11 +1,12 @@
 <template>
   <div
-    class="relative h-[90vh] flex items-center text-center bg-cover bg-center transition-all duration-700"
+    class="relative h-[80vh] flex items-center text-center bg-cover bg-center transition-all duration-700 mt-20"
     :style="{ backgroundImage: `url(${backgrounds[currentIndex]})` }"
   >
-    <div class="absolute inset-0 bg-black/50"></div>
-
-    <div class="relative z-10 text-white max-w-3xl mx-auto px-6">
+    <div
+      v-if="currentIndex % 2 === 0"
+      class="hero-content absolute z-10 text-white w-full right-1/4"
+    >
       <h1 class="text-5xl font-bold mb-4">
         {{ contents[currentIndex].title }}
       </h1>
@@ -15,16 +16,34 @@
 
       <button
         @click="$emit('open-form')"
-        class="bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 inline-block"
+        class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
       >
         {{ contents[currentIndex].buttonText }}
       </button>
     </div>
 
+    <div v-else class="hero-content absolute z-10 text-white w-full left-1/4">
+      <div class="">
+        <h1 class="text-5xl font-bold mb-4">
+          {{ contents[currentIndex].title }}
+        </h1>
+        <p class="text-lg mb-6 opacity-90">
+          {{ contents[currentIndex].description }}
+        </p>
+
+        <button
+          @click="$emit('open-form')"
+          class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
+        >
+          {{ contents[currentIndex].buttonText }}
+        </button>
+      </div>
+    </div>
+
     <button
       v-if="backgrounds.length > 1"
       @click="prevBackground"
-      class="absolute left-4 top-1/2 transform -translate-y-1/2 hover:bg-black/60 text-white text-4xl p-4 rounded-full"
+      class="absolute z-10 left-4 top-1/2 transform -translate-y-1/2 hover:bg-black/60 text-white text-4xl p-4 rounded-full"
     >
       ❮
     </button>
@@ -32,7 +51,7 @@
     <button
       v-if="backgrounds.length > 1"
       @click="nextBackground"
-      class="absolute right-4 top-1/2 transform -translate-y-1/2 hover:bg-black/60 text-white text-4xl p-4 rounded-full"
+      class="absolute z-10 right-4 top-1/2 transform -translate-y-1/2 hover:bg-black/60 text-white text-4xl p-4 rounded-full"
     >
       ❯
     </button>
@@ -40,7 +59,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { computed } from "vue";
 
 const props = defineProps({
@@ -62,10 +81,31 @@ const prevBackground = () => {
 const nextBackground = () => {
   currentIndex.value = (currentIndex.value + 1) % backgrounds.value.length;
 };
+
+const screenWidth = ref(window.innerWidth);
+// Theo dõi thay đổi kích thước màn hình
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateScreenWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateScreenWidth);
+});
 </script>
 
 <style scoped>
 section {
-  transition: background-image 0.8s ease-in-out;
+  transition: background-image 3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    left: 0;
+    right: 0;
+  }
 }
 </style>

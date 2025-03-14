@@ -29,11 +29,13 @@
           class="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <button
-            class="bg-orange-500 text-white px-6 py-2 rounded font-semibold"
+            class="bg-orange-500 text-white px-6 py-2 hover:bg-orange-700 rounded font-semibold"
           >
             LET’S GET STARTED!
           </button>
-          <button class="border border-white px-6 py-2 rounded font-semibold">
+          <button
+            class="border border-gray-500 px-6 py-2 hover:border-white rounded font-semibold"
+          >
             OUR PORTFOLIO
           </button>
         </div>

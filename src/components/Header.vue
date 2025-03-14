@@ -63,7 +63,7 @@
 
       <button
         @click="openForm = true"
-        class="hidden md:block bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700"
+        class="hidden md:block bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black"
       >
         Liên hệ ngay
       </button>

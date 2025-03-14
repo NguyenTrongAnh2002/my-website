@@ -12,7 +12,12 @@
         <div
           v-for="(service, index) in services"
           :key="index"
-          class="w-1/3 flex-shrink-0 p-4"
+          class="flex-shrink-0 p-4"
+          :class="{
+            'w-1/3': itemsPerSlide() === 3,
+            'w-1/2': itemsPerSlide() === 2,
+            'w-full': itemsPerSlide() === 1,
+          }"
         >
           <div class="bg-white shadow-lg rounded-lg overflow-hidden">
             <img :src="service.image" class="w-full h-64 object-cover" />
@@ -62,7 +67,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import slider_img1 from "../assets/img/bg/slider-1.jpg";
 import slider_img2 from "../assets/img/bg/slider-2.jpg";
 import slider_img3 from "../assets/img/bg/slider-3.jpg";
@@ -110,11 +115,18 @@ const services = ref([
 ]);
 
 const currentIndex = ref(0);
-const itemsPerSlide = 3;
-const totalSlides = computed(() =>
-  Math.ceil(services.value.length / itemsPerSlide)
-);
 
+const itemsPerSlide = () => {
+  if (screenWidth.value >= 1024) return 3;
+  if (screenWidth.value < 1024 && screenWidth.value > 600) return 2;
+  return 1;
+};
+
+const screenWidth = ref(window.innerWidth);
+
+const totalSlides = computed(() =>
+  Math.ceil(services.value.length / itemsPerSlide())
+);
 const next = () => {
   if (currentIndex.value < totalSlides.value - 1) {
     currentIndex.value++;
@@ -130,6 +142,19 @@ const prev = () => {
 const goToSlide = (index) => {
   currentIndex.value = index;
 };
+
+// Theo dõi thay đổi kích thước màn hình
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateScreenWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateScreenWidth);
+});
 </script>
 
 <style scoped>

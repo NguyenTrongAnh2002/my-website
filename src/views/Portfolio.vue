@@ -25,10 +25,9 @@ import anh16 from "../assets/img/product/portfolio-16.jpg";
 const backgrounds = ref([heroBg_portfolio]);
 const contents = ref([
   {
-    title: "OUR PORTFOLIO",
-    description:
-      "Our portfolio showcases some of our works and images shared with us by our clients whom we have helped for production and the capabilities of our factories.",
-    buttonText: "Liên hệ ngay",
+    title: "",
+    description: "",
+    buttonText: "",
   },
 ]);
 
@@ -52,7 +51,9 @@ const products = ref([
 ]);
 </script>
 <template>
-  <HeroComponent :contents="contents" :backgrounds="backgrounds" />
+  <div class="bg-portfolio">
+    <HeroComponent :contents="contents" :backgrounds="backgrounds" />
+  </div>
 
   <div class="w-9/12 mx-auto text-center">
     <div class="overflow-hidden relative">
@@ -80,4 +81,8 @@ const products = ref([
   <BrandComponent />
   <FooterComponent />
 </template>
-<style scoped></style>
+<style>
+.bg-portfolio .hero-content {
+  display: none;
+}
+</style>

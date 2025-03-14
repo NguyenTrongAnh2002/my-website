@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import HeaderComponent from "../components/Header.vue";
 import HeroComponent from "../components/Hero.vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
@@ -21,16 +20,17 @@ import about9 from "../assets/img/bg/about9.jpg";
 const backgrounds = ref([heroBg_about]);
 const contents = ref([
   {
-    title: "Xưởng May Chuyên Nghiệp",
-    description:
-      "Chúng tôi cung cấp dịch vụ may mặc chất lượng cao với giá cạnh tranh.",
-    buttonText: "Liên hệ ngay",
+    title: "Starting a Clothing Line",
+    description: "",
+    buttonText: "INQUIRE NOW",
   },
 ]);
 </script>
 
 <template>
-  <HeroComponent :contents="contents" :backgrounds="backgrounds" />
+  <div class="bg-about">
+    <HeroComponent :contents="contents" :backgrounds="backgrounds" />
+  </div>
 
   <section
     class="py-20 bg-gray-100"
@@ -457,4 +457,9 @@ const contents = ref([
   <FooterComponent />
 </template>
 
-<style scoped></style>
+<style>
+.bg-about .hero-content {
+  color: black;
+  font-size: 60px;
+}
+</style>

@@ -5,6 +5,8 @@ import HeroComponent from "../components/Hero.vue";
 import WrapperComponent from "../components/Wrapper.vue";
 import ClothingComponent from "../components/Clothing.vue";
 import SliderComponent from "../components/Slider.vue";
+import Experience from "../components/Experience.vue";
+import Partner from "../components/Partner.vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
@@ -12,6 +14,7 @@ import hero_bg1 from "../assets/img/bg/background-1.jpg";
 import hero_bg2 from "../assets/img/bg/background-2.jpg";
 import hero_bg3 from "../assets/img/bg/background-3.jpg";
 const backgrounds = ref([hero_bg1, hero_bg2, hero_bg3]);
+
 const contents = ref([
   {
     title: "Xưởng May Chuyên Nghiệp",
@@ -49,6 +52,8 @@ const isFormVisible = ref(false);
   <WrapperComponent />
   <ClothingComponent />
   <SliderComponent />
+  <Experience />
+  <Partner />
   <BrandComponent />
   <FooterComponent />
 </template>
