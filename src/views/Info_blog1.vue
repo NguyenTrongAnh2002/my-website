@@ -12,17 +12,16 @@
   <div class="relative w-full h-auto mx-auto my-16 px-4">
     <div class="relative w-2/3 h-auto mx-auto">
       <div class="bg-orange-500 text-center w-52 mx-auto my-5">
-        <a class="text-white" href="/about"> CUSTOM AFFIX APPAREL</a>
+        <a class="text-white" href="/blog"> CUSTOM AFFIX APPAREL</a>
       </div>
       <div class="text-center mb-5">
         <strong class="text-2xl md:text-3xl">
-          Sustainable Packaging for Clothing: Eco-Friendly Ideas to Try
+          {{ service.title }}
         </strong>
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img :src="blog_img1" class="w-full object-cover" />
+        <img :src="service.image" class="w-full object-cover" />
       </div>
-
       <p>
         Sustainable packaging for clothing​ is more than a trend; it is a
         requirement. With growing environmental awareness among consumers, they
@@ -56,15 +55,13 @@ import blog_img4 from "../assets/img/bg/blog4.jpg";
 import blog_img5 from "../assets/img/bg/blog5.jpg";
 import blog_img6 from "../assets/img/bg/blog6.jpg";
 
-const services = ref([
-  {
-    date: "21 Feb 2025",
-    title: "Sustainable Packaging for Clothing: Eco-Friendly Ideas to Try",
-    description:
-      "Sustainable packaging for clothing​ is more than a trend; it is a requirement. With growing environmental awareness among consumers, th...",
-    image: blog_img1,
-  },
-]);
+const service = ref({
+  date: "21 Feb 2025",
+  title: "Sustainable Packaging for Clothing: Eco-Friendly Ideas to Try",
+  description:
+    "Sustainable packaging for clothing​ is more than a trend; it is a requirement. With growing environmental awareness among consumers, th...",
+  image: blog_img1,
+});
 </script>
 
 <style scoped>

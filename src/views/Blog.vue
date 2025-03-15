@@ -27,7 +27,7 @@
               class="itemBlog-container bg-white shadow-lg rounded-lg overflow-hidden"
             >
               <div class="overflow-hidden">
-                <a href=""
+                <a :href="`blog/` + service.href"
                   ><img :src="service.image" class="w-full h-64 object-cover"
                 /></a>
               </div>
@@ -72,6 +72,7 @@ import { RouterView } from "vue-router";
 
 const services = ref([
   {
+    href: "info_blog1",
     date: "21 Feb 2025",
     title: "Sustainable Packaging for Clothing: Eco-Friendly Ideas to Try",
     description:
@@ -79,6 +80,7 @@ const services = ref([
     image: blog_img1,
   },
   {
+    href: "info_blog2",
     date: "16 Feb 2025",
     title: "How to Promote Your T-Shirt Business & Grow Faster",
     description:
@@ -86,6 +88,7 @@ const services = ref([
     image: blog_img2,
   },
   {
+    href: "info_blog3",
     date: "21 jan 2025",
     title: "The Benefits of Fast Fashion: Style at Lightning Speed",
     description:
@@ -93,6 +96,7 @@ const services = ref([
     image: blog_img3,
   },
   {
+    href: "info_blog4",
     date: "01 Feb 2025",
     title: "Cost to Start a Swimwear Line: Complete Guide for Beginners",
     description:
@@ -100,6 +104,7 @@ const services = ref([
     image: blog_img4,
   },
   {
+    href: "info_blog5",
     date: "21 Feb 2025",
     title:
       "What is a Trucker Hat And Why it’s Back? Everything You Need to Know",
@@ -108,6 +113,7 @@ const services = ref([
     image: blog_img5,
   },
   {
+    href: "info_blog6",
     date: "21 Feb 2025",
     title: "Sweater vs Sweatshirt: A Guide To Key Differences!",
     description:
@@ -142,6 +148,9 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+template {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .bg-blog {
   width: 100%;
   height: auto;
