@@ -40,7 +40,7 @@
                 <button
                   class="mt-4 bg-gray-200 text-orange-400 px-4 py-2 rounded-full text-sm hover:bg-white"
                 >
-                  <a href="">CONTINUE READING</a>
+                  <a :href="`blog/` + service.href">CONTINUE READING</a>
                 </button>
               </div>
             </div>

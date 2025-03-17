@@ -3,15 +3,8 @@
     v-if="isOpen"
     class="fixed inset-0 z-20 bg-black bg-opacity-50 flex items-center justify-center"
   >
-    <div class="flex bg-white p-6 rounded-lg w-1/2 relative">
-      <div class="img-form w-1/2">
-        <img
-          src="https://affixapparel.com/wp-content/uploads/2024/11/pop-image-2.jpg"
-          alt=""
-        />
-      </div>
-
-      <div class="w-1/2 p-4">
+    <div class="flex bg-white p-6 rounded-lg w-3/4 relative">
+      <div class="w-full p-4">
         <button
           @click="$emit('close-form')"
           class="absolute top-2 right-2 text-5xl"
