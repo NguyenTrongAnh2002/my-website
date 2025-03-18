@@ -380,15 +380,10 @@ import { ref } from "vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
-import bg_blog from "../assets/img/bg/bg-blog.jpg";
-// import blog1_img1 from "../assets/img/bg/blog1.jpg";
-import blog1_img1 from "../assets/img/bg/1.jpg";
-import blog1_img2 from "../assets/img/bg/2.jpg";
-import blog1_img3 from "../assets/img/bg/3.jpg";
-import blog1_img4 from "../assets/img/bg/4.jpg";
-// import blog1_img2 from "../assets/img/bg/blog1_img2.jpg";
-// import blog1_img3 from "../assets/img/bg/blog1_img3.jpg";
-// import blog1_img4 from "../assets/img/bg/blog1_img4.jpg";
+import blog1_img1 from "../assets/img/bg/blog1-img1.jpg";
+import blog1_img2 from "../assets/img/bg/blog1-img2.jpg";
+import blog1_img3 from "../assets/img/bg/blog1-img3.jpg";
+import blog1_img4 from "../assets/img/bg/blog1-img4.jpg";
 </script>
 
 <style scoped>

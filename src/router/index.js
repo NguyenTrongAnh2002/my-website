@@ -5,6 +5,7 @@ import Portfolio from "../views/Portfolio.vue";
 import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
 import Info_blog1 from "../views/Info_blog1.vue";
+import Info_blog2 from "../views/Info_blog2.vue";
 
 const routes = [
   { path: "/", component: Home, meta: { title: "HOME " } },
@@ -28,6 +29,12 @@ const routes = [
         name: "info_blog1",
         component: Info_blog1,
         meta: { title: "Đồ đôi mẹ và bé" },
+      },
+      {
+        path: "info_blog2",
+        name: "info_blog2",
+        component: Info_blog2,
+        meta: { title: "blog2" },
       },
     ],
   },
