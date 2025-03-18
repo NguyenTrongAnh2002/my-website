@@ -74,9 +74,9 @@ const services = ref([
   {
     href: "info_blog1",
     date: "21 Feb 2025",
-    title: "Sustainable Packaging for Clothing: Eco-Friendly Ideas to Try",
+    title: " Xu hướng diện đồ đôi mẹ và bé : Tăng sự gắn kết, tạo kỷ niệm đẹp ",
     description:
-      "Sustainable packaging for clothing​ is more than a trend; it is a requirement. With growing environmental awareness among consumers, th...",
+      "Bạn đã bao giờ thử diện đồ đôi cùng bé yêu chưa? Không chỉ là xu hướng thời trang hot hit, đồ đôi mẹ và bé còn là cách tuyệt vời để tăng sự gắn kết và lưu giữ những kỷ niệm đáng nhớ....",
     image: blog_img1,
   },
   {

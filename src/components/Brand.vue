@@ -6,6 +6,7 @@
       </h2>
       <div class="mt-2 border-t-2 border-black w-16 mx-auto"></div>
       <button
+        @click="openForm = true"
         class="mt-4 border border-black px-4 py-2 hover:bg-black hover:text-white transition"
       >
         REQUEST YOUR FREE CONSULTATION!
@@ -21,13 +22,18 @@
       />
     </div>
   </div>
+  <RequestForm :isOpen="openForm" @close-form="openForm = false" />
 </template>
 
 <script setup>
+import { ref } from "vue";
+import RequestForm from "./RequestForm.vue";
 import brand1 from "../assets/img/logo/brand-1.jpg";
 import brand2 from "../assets/img/logo/brand-2.jpg";
 import brand3 from "../assets/img/logo/brand-3.png";
 import brand4 from "../assets/img/logo/brand-4.jpg";
 
 const logos = [brand1, brand2, brand3, brand4];
+
+const openForm = ref(false);
 </script>

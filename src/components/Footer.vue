@@ -23,24 +23,28 @@
           <a
             href="https://www.facebook.com"
             class="text-gray-400 hover:text-white text-xl"
+            target="_blank"
           >
             <i class="fa-brands fa-facebook"></i>
           </a>
           <a
             href="https://www.instagram.com"
             class="text-gray-400 hover:text-white text-xl"
+            target="_blank"
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a
             href="https://www.linkedin.com"
             class="text-gray-400 hover:text-white text-xl"
+            target="_blank"
           >
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <a
             href="https://www.x.com"
             class="text-gray-400 hover:text-white text-xl"
+            target="_blank"
           >
             <i class="fa-brands fa-twitter"></i>
           </a>
