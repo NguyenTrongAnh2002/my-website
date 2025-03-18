@@ -62,7 +62,7 @@ import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
 import bg_blog from "../assets/img/bg/bg-blog.jpg";
-import blog_img1 from "../assets/img/bg/blog1.jpg";
+import blog_img1 from "../assets/img/bg/1.jpg";
 import blog_img2 from "../assets/img/bg/blog2.jpg";
 import blog_img3 from "../assets/img/bg/blog3.jpg";
 import blog_img4 from "../assets/img/bg/blog4.jpg";
