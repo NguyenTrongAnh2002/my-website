@@ -16,7 +16,7 @@ const routes = [
   {
     path: "/portfolio",
     component: Portfolio,
-    meta: { title: "PORTFOLIO-My Website" },
+    meta: { title: "PORTFOLIO" },
   },
   {
     path: "/blog",
@@ -27,7 +27,7 @@ const routes = [
         path: "info_blog1",
         name: "info_blog1",
         component: Info_blog1,
-        meta: { title: "Blog 1" },
+        meta: { title: "Đồ đôi mẹ và bé" },
       },
     ],
   },
