@@ -21,6 +21,7 @@
                 v-model="formData.name"
                 type="text"
                 placeholder="Your Name"
+                required
                 class="border p-2 rounded w-full"
               />
             </div>
@@ -30,6 +31,7 @@
                 v-model="formData.number"
                 type="text"
                 placeholder="Phone Number"
+                required
                 class="border p-2 rounded w-full"
               />
             </div>
@@ -40,6 +42,7 @@
               v-model="formData.email"
               type="email"
               placeholder="Your Email"
+              required
               class="border p-2 rounded w-full"
             />
           </div>

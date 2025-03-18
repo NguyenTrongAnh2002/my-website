@@ -5,7 +5,7 @@
     >
       <div class="container mx-auto flex flex-col lg:flex-row items-center">
         <div class="lg:w-1/3 text-center mx-auto">
-          <h1 class="text-2xl md:text-6xl">BLOG</h1>
+          <h1 class="text-2xl md:text-6xl">Blog</h1>
         </div>
       </div>
     </section>

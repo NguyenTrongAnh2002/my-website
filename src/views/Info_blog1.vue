@@ -4,7 +4,14 @@
   >
     <div class="container mx-auto flex flex-col lg:flex-row items-center">
       <div class="lg:w-1/3 text-center mx-auto">
-        <h1 class="text-2xl md:text-6xl">BLOG 1</h1>
+        <h1 class="text-2xl md:text-6xl">Blog</h1>
+        <div class="mt-5">
+          <span class="text-xs font-bold"><a href="/">HOME</a></span>
+          <span class="text-xs font-bold ms-3">/</span>
+          <span class="text-xs font-bold ms-3"
+            ><a class="text-white" href="/blog">CUSTOM AFFIX APPAREL</a></span
+          >
+        </div>
       </div>
     </div>
   </section>

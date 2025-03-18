@@ -4,13 +4,7 @@ import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
 import map from "../assets/img/bg/map.png";
-const backgrounds = ref([map]);
-const contents = ref([
-  {
-    title: "",
-    description: "",
-  },
-]);
+
 const formData = ref({
   name: "",
   number: "",
@@ -37,6 +31,7 @@ const formData = ref({
                 v-model="formData.name"
                 type="text"
                 placeholder="Your Name"
+                required
                 class="border p-2 rounded w-full"
               />
             </div>
@@ -46,6 +41,7 @@ const formData = ref({
                 v-model="formData.number"
                 type="text"
                 placeholder="Phone Number"
+                required
                 class="border p-2 rounded w-full"
               />
             </div>
@@ -56,6 +52,7 @@ const formData = ref({
               v-model="formData.email"
               type="email"
               placeholder="Your Email"
+              required
               class="border p-2 rounded w-full"
             />
           </div>
