@@ -219,7 +219,7 @@ onUnmounted(() => {
       </div>
 
       <div
-        class="container mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+        class="container mx-auto mt-12 text-left grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:text-center"
       >
         <div
           class="text-lg md:text-xl font-bold text-orange-500"

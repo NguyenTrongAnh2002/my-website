@@ -33,7 +33,9 @@
               </div>
               <div class="p-6">
                 <p class="opacity-50">{{ service.date }}</p>
-                <a href="" class="font-bold text-lg">{{ service.title }}</a>
+                <a :href="`blog/` + service.href" class="font-bold text-lg">{{
+                  service.title
+                }}</a>
                 <p class="text-gray-600 text-sm mt-2">
                   {{ service.description }}
                 </p>

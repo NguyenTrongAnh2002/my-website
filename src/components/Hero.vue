@@ -97,7 +97,7 @@ let intervalId = null;
 const startAutoSlide = () => {
   intervalId = setInterval(() => {
     currentIndex.value = (currentIndex.value + 1) % backgrounds.value.length;
-  }, 500000);
+  }, 5000);
 };
 // Theo dõi thay đổi kích thước màn hình
 const updateScreenWidth = () => {

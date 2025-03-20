@@ -6,11 +6,11 @@
 
     <div class="overflow-hidden relative">
       <div
-        class="flex transition-transform duration-500 ease-in-out"
+        class="flex transition-transform duration-1000 ease-in-out"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <div
-          v-for="(service, index) in services"
+          v-for="(service, index) in limitedServices"
           :key="index"
           class="flex-shrink-0 p-4"
           :class="{
@@ -38,12 +38,14 @@
     </div>
 
     <button
+      v-if="currentIndex > 0"
       @click="prev"
       class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full"
     >
       <i class="fa-solid fa-angle-left"></i>
     </button>
     <button
+      v-if="currentIndex < limitedServices.length / itemsPerSlide() - 1"
       @click="next"
       class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full"
     >
@@ -68,52 +70,9 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import slider_img1 from "../assets/img/bg/slider-1.jpg";
-import slider_img2 from "../assets/img/bg/slider-2.jpg";
-import slider_img3 from "../assets/img/bg/slider-3.jpg";
-import slider_img4 from "../assets/img/bg/slider-4.jpg";
-import slider_img5 from "../assets/img/bg/slider-5.jpg";
-import slider_img6 from "../assets/img/bg/slider-6.jpg";
+import { services } from "../js/blogData";
 
-const services = ref([
-  {
-    title: "Cut and Sew Manufacturing",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img1,
-  },
-  {
-    title: "Private Labeling",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img2,
-  },
-  {
-    title: "Custom Screen Printing",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img3,
-  },
-  {
-    title: "Embroidery Services",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img4,
-  },
-  {
-    title: "Sublimation Printing",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img5,
-  },
-  {
-    title: "Bulk Manufacturing",
-    description:
-      "We customize your garments from raw fabric. We create each item within your custom clothing line with care and attention. The quality of our cut-and-sewn apparel generally exceeds that of mass-produced apparel.",
-    image: slider_img6,
-  },
-]);
-
+const limitedServices = computed(() => services.value.slice(0, 6));
 const currentIndex = ref(0);
 
 const itemsPerSlide = () => {
@@ -125,8 +84,9 @@ const itemsPerSlide = () => {
 const screenWidth = ref(window.innerWidth);
 
 const totalSlides = computed(() =>
-  Math.ceil(services.value.length / itemsPerSlide())
+  Math.ceil(limitedServices.value.length / itemsPerSlide())
 );
+
 const next = () => {
   if (currentIndex.value < totalSlides.value - 1) {
     currentIndex.value++;
@@ -157,8 +117,4 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
-button {
-  transition: background 0.3s;
-}
-</style>
+<style scoped></style>

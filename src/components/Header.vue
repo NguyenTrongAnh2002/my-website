@@ -65,7 +65,7 @@
         @click="openForm = true"
         class="hidden md:block bg-white border border-black text-black px-6 py-3 rounded-lg text-lg hover:bg-black hover:text-white"
       >
-        Liên hệ ngay
+        GET STARTED
       </button>
 
       <!-- Mobile Menu Button -->
