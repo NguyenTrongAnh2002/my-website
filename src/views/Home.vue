@@ -100,12 +100,14 @@ onUnmounted(() => {
       class="py-20 bg-gray-100"
       :style="{ backgroundImage: `url(${bg_wrapper})` }"
     >
-      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+      <div
+        class="container mx-auto md:px-10 flex flex-col lg:flex-row items-center"
+      >
         <div class="lg:w-1/2 w-full px-6">
           <img :src="wrapper_1" alt="Xưởng May" class="rounded-lg shadow-lg" />
         </div>
 
-        <div class="lg:w-1/2 w-full px-6 mt-6 lg:mt-0 text-center lg:text-left">
+        <div class="lg:w-1/2 w-full px-6 mt-6 lg:mt-0 text-left">
           <h2 class="text-4xl font-bold text-gray-800 mb-4">
             Premier Clothing Manufacturers Shaping Trends Beyond Fashion
           </h2>
@@ -119,7 +121,7 @@ onUnmounted(() => {
             as 50 pieces.
           </p>
           <button
-            class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
+            class="bg-gray-800 text-white px-6 py-3 ms-4 rounded-lg text-lg hover:bg-black inline-block"
             @click="openForm = true"
           >
             GET IN TOUCH
@@ -169,9 +171,11 @@ onUnmounted(() => {
     <section
       class="production-clothing relative bg-cover bg-center text-white py-16 px-6 md:px-12"
     >
-      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+      <div
+        class="container mx-auto md:px-10 flex flex-col lg:flex-row items-center"
+      >
         <div class="lg:w-1/3 text-left">
-          <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 class="text-xl md:text-4xl font-bold leading-tight">
             <span class="text-orange-500">Clothing Manufacturer</span> For Small
             Business: How We Make Your Clothes?
           </h2>
@@ -263,6 +267,7 @@ onUnmounted(() => {
             class="mt-6 flex flex-col justify-center sm:flex-row space-y-4 sm:space-y-0"
           >
             <button
+              @click="openForm = true"
               class="border border-gray-400 px-6 py-2 rounded font-semibold hover:border-white"
             >
               GET PERSONALIZEDHELP!
@@ -275,7 +280,9 @@ onUnmounted(() => {
 
   <div class="partner">
     <section class="py-20">
-      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+      <div
+        class="container mx-auto md:px-10 flex flex-col lg:flex-row items-center"
+      >
         <div class="lg:w-2/3 w-full px-6 mt-6 lg:mt-0 text-center lg:text-left">
           <h2 class="text-4xl font-bold text-gray-800 mb-4">
             Why We're Your Partner of Choice?
@@ -336,6 +343,7 @@ onUnmounted(() => {
               </div>
             </div>
             <button
+              @click="openForm = true"
               class="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 inline-block"
             >
               CONSULT NOW

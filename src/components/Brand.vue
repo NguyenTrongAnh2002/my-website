@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center text-center py-10">
-    <div class="bg-yellow-400 w-3/4 py-10 rounded-md">
+    <div class="brand-container bg-yellow-400 w-3/4 py-10 rounded-md">
       <h2 class="text-2xl font-semibold">
         Get Your Brand Noticed with Custom Apparel!
       </h2>
@@ -37,3 +37,11 @@ const logos = [brand1, brand2, brand3, brand4];
 
 const openForm = ref(false);
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .brand-container {
+    width: 100%;
+  }
+}
+</style>

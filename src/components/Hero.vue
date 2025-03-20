@@ -1,42 +1,48 @@
 <template>
   <div
-    class="relative h-[80vh] flex items-center text-center bg-cover bg-center transition-all duration-700 mt-20"
+    class="relative h-[30vh] md:h-[80vh] sm:h-[60vh] flex items-center text-center bg-cover bg-center transition-all duration-700 mt-20 overflow-hidden"
     :style="{ backgroundImage: `url(${backgrounds[currentIndex]})` }"
   >
     <div
       v-if="currentIndex % 2 === 0"
-      class="hero-content absolute z-10 text-white w-full right-1/4"
+      class="hero-content absolute z-10 text-white w-full"
     >
-      <h1 class="text-5xl font-bold mb-4">
-        {{ contents[currentIndex].title }}
-      </h1>
-      <p class="text-lg mb-6 opacity-90">
-        {{ contents[currentIndex].description }}
-      </p>
+      <div class="w-4/5 mx-auto">
+        <div class="w-1/2 text-left">
+          <h1 class="text-5xl font-bold mb-4">
+            {{ contents[currentIndex].title }}
+          </h1>
+          <p class="text-lg mb-6 opacity-90">
+            {{ contents[currentIndex].description }}
+          </p>
 
-      <button
-        @click="$emit('open-form')"
-        class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
-      >
-        {{ contents[currentIndex].buttonText }}
-      </button>
+          <button
+            @click="openForm = true"
+            class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
+          >
+            {{ contents[currentIndex].buttonText }}
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div v-else class="hero-content absolute z-10 text-white w-full left-1/4">
-      <div class="">
-        <h1 class="text-5xl font-bold mb-4">
-          {{ contents[currentIndex].title }}
-        </h1>
-        <p class="text-lg mb-6 opacity-90">
-          {{ contents[currentIndex].description }}
-        </p>
+    <div v-else class="hero-content absolute z-10 text-white w-full">
+      <div class="w-4/5 mx-auto">
+        <div class="w-1/2 ms-auto text-left">
+          <h1 class="text-5xl font-bold mb-4">
+            {{ contents[currentIndex].title }}
+          </h1>
+          <p class="text-lg mb-6 opacity-90">
+            {{ contents[currentIndex].description }}
+          </p>
 
-        <button
-          @click="$emit('open-form')"
-          class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
-        >
-          {{ contents[currentIndex].buttonText }}
-        </button>
+          <button
+            @click="openForm = true"
+            class="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-black inline-block"
+          >
+            {{ contents[currentIndex].buttonText }}
+          </button>
+        </div>
       </div>
     </div>
 
@@ -56,10 +62,14 @@
       ❯
     </button>
   </div>
+  <RequestForm :isOpen="openForm" @close-form="openForm = false" />
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import RequestForm from "./RequestForm.vue";
+
+const openForm = ref(false);
 
 const props = defineProps({
   backgrounds: Array,
@@ -82,6 +92,13 @@ const nextBackground = () => {
 };
 
 const screenWidth = ref(window.innerWidth);
+
+let intervalId = null;
+const startAutoSlide = () => {
+  intervalId = setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % backgrounds.value.length;
+  }, 500000);
+};
 // Theo dõi thay đổi kích thước màn hình
 const updateScreenWidth = () => {
   screenWidth.value = window.innerWidth;
@@ -89,10 +106,12 @@ const updateScreenWidth = () => {
 
 onMounted(() => {
   window.addEventListener("resize", updateScreenWidth);
+  startAutoSlide();
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", updateScreenWidth);
+  clearInterval(intervalId);
 });
 </script>
 
@@ -105,6 +124,15 @@ section {
   .hero-content {
     left: 0;
     right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  button,
+  p {
+    display: none;
   }
 }
 </style>

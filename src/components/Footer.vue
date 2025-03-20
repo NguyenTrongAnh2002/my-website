@@ -2,9 +2,6 @@
   <div class="bg-black text-white py-10">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
-        <a href=""
-          ><img :src="logo_footer" alt="Affix Apparel" class="w-40 mb-4"
-        /></a>
         <div class="mt-4 space-y-2 text-gray-400">
           <p>
             <i class="fa-solid fa-phone" style="color: #ff5a3d"></i>(323)
@@ -50,18 +47,6 @@
           </a>
         </div>
       </div>
-
-      <div>
-        <h3 class="text-lg font-semibold mb-4">OUR SERVICES</h3>
-        <ul class="space-y-2 text-gray-400">
-          <li v-for="service in services">
-            <a :href="service.href" class="hover:text-white">{{
-              service.name
-            }}</a>
-          </li>
-        </ul>
-      </div>
-
       <div>
         <h3 class="text-lg font-semibold mb-4">QUICK LINKS</h3>
         <ul class="space-y-2 text-gray-400">
@@ -69,15 +54,14 @@
             <a :href="link.href" class="hover:text-white">{{ link.name }}</a>
           </li>
         </ul>
-
-        <div class="mt-6">
-          <h3 class="text-lg font-semibold mb-2">Secure Payments</h3>
-          <div class="flex space-x-2">
-            <img :src="logo_visa" class="w-14 h-8" />
-            <img :src="logo_mastercard" class="w-14 h-8" />
-            <img :src="logo_paypal" class="w-14 h-8" />
-            <img :src="logo_discover" class="w-14 h-8" />
-          </div>
+      </div>
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Secure Payments</h3>
+        <div class="flex space-x-2">
+          <img :src="logo_visa" class="w-14 h-8" />
+          <img :src="logo_mastercard" class="w-14 h-8" />
+          <img :src="logo_paypal" class="w-14 h-8" />
+          <img :src="logo_discover" class="w-14 h-8" />
         </div>
       </div>
     </div>
@@ -96,21 +80,11 @@
 
 <script setup>
 import { ref } from "vue";
-import logo_footer from "../assets/img/logo/logo-footer.png";
+import logo_footer from "../assets/img/logo/logo.png";
 import logo_visa from "../assets/img/logo/logo-visa.png";
 import logo_mastercard from "../assets/img/logo/logo-mastercard.png";
 import logo_paypal from "../assets/img/logo/logo-paypal.png";
 import logo_discover from "../assets/img/logo/logo-discover.png";
-
-const services = ref([
-  { name: "Jeans Manufacturer", href: "#" },
-  { name: "Leggings Manufacturer", href: "#" },
-  { name: "Cut and Sew Manufacturer", href: "#" },
-  { name: "Cushion Covers Manufacturer", href: "#" },
-  { name: "Leather Goods Manufacturer", href: "#" },
-  { name: "Hoodie Manufacturer", href: "#" },
-  { name: "T-Shirt Manufacturer", href: "#" },
-]);
 
 const quickLinks = ref([
   { name: "Home", href: "#" },

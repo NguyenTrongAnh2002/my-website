@@ -20,9 +20,9 @@ import about9 from "../assets/img/bg/about9.jpg";
 const backgrounds = ref([heroBg_about]);
 const contents = ref([
   {
-    title: "Starting a Clothing Line",
+    title: "",
     description: "",
-    buttonText: "INQUIRE NOW",
+    buttonText: "",
   },
 ]);
 </script>
@@ -459,7 +459,6 @@ const contents = ref([
 
 <style>
 .bg-about .hero-content {
-  color: black;
-  font-size: 60px;
+  display: none;
 }
 </style>

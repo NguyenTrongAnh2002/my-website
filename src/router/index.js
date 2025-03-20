@@ -34,7 +34,7 @@ const routes = [
         path: "info_blog2",
         name: "info_blog2",
         component: Info_blog2,
-        meta: { title: "blog2" },
+        meta: { title: "Quần áo gia công" },
       },
     ],
   },

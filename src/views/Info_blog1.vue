@@ -1,34 +1,14 @@
 <template>
-  <section
-    class="bg-blog relative bg-cover bg-center text-white py-16 px-6 mt-20 md:px-12"
-  >
-    <div class="container mx-auto flex flex-col lg:flex-row items-center">
-      <div class="lg:w-1/3 text-center mx-auto">
-        <h1 class="text-2xl md:text-6xl">Blog</h1>
-        <div class="mt-5">
-          <span class="text-xs font-bold"><a href="/">HOME</a></span>
-          <span class="text-xs font-bold ms-3">/</span>
-          <span class="text-xs font-bold ms-3"
-            ><a class="text-white" href="/blog">CUSTOM AFFIX APPAREL</a></span
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <Blog_bg />
   <div class="relative w-full h-auto mx-auto my-16 px-4">
     <div class="blog-container relative w-2/3 h-auto mx-auto">
-      <div class="bg-orange-500 text-center w-52 mx-auto my-5">
-        <a class="text-white" href="/blog"> CUSTOM AFFIX APPAREL</a>
-      </div>
-
       <div class="blog-item my-5">
         <div class="text-center mb-5">
           <strong class="text-2xl md:text-3xl">
             Xu hướng diện đồ đôi mẹ và bé : Tăng sự gắn kết, tạo kỷ niệm đẹp
           </strong>
         </div>
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden my-10">
           <img :src="blog1_img1" class="w-full object-cover" />
         </div>
         <p class="mt-5 leading-7">
@@ -377,6 +357,7 @@
 
 <script setup>
 import { ref } from "vue";
+import Blog_bg from "../components/Blog_bg.vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
@@ -387,20 +368,6 @@ import blog1_img4 from "../assets/img/bg/blog1-img4.jpg";
 </script>
 
 <style scoped>
-.bg-blog {
-  width: 100%;
-  height: auto;
-  background-image: url("../assets/img/bg/cta-banner.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-@media (max-width: 1024px) {
-  .bg-blog {
-    background-attachment: scroll;
-  }
-}
-
 @media (max-width: 768px) {
   .blog-container {
     width: 85%;

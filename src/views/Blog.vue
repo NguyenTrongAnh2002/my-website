@@ -80,9 +80,9 @@ const services = ref([
   {
     href: "info_blog2",
     date: "16 Feb 2025",
-    title: "How to Promote Your T-Shirt Business & Grow Faster",
+    title: "Quần áo gia công – Giải pháp tối ưu cho thương hiệu thời trang",
     description:
-      "Starting a t-shirt business is exciting, but do you know how to promote your t-shirt business effectively to stand out? No matter if yo...",
+      "Trong xu hướng thời trang hiện đại, việc gia công quần áo đang trở thành giải pháp tối ưu cho nhiều doanh nghiệp, shop thời trang và startup...",
     image: blog_img2,
   },
   {

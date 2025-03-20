@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white shadow-md fixed top-0 left-0 w-full z-50 h-20 flex items-center"
+    class="bg-white shadow-md fixed top-0 left-0 w-full z-20 h-20 flex items-center"
   >
     <div
       class="container mx-auto flex items-center justify-between px-6 w-full max-w-7xl"
@@ -160,7 +160,7 @@
 <script setup>
 import { ref } from "vue";
 import RequestForm from "./RequestForm.vue";
-import logo_header from "../assets/img/logo/logo-header.png";
+import logo_header from "../assets/img/logo/logo.png";
 import { RouterLink } from "vue-router";
 
 const navlinks = ref([
