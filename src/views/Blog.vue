@@ -14,7 +14,7 @@
       <div class="overflow-hidden relative">
         <div class="flex flex-wrap">
           <div
-            v-for="(service, index) in services"
+            v-for="(item_blog, index) in paginatedBlogs"
             :key="index"
             class="flex-shrink-0 p-4"
             :class="{
@@ -27,27 +27,56 @@
               class="itemBlog-container bg-white shadow-lg rounded-lg overflow-hidden"
             >
               <div class="overflow-hidden">
-                <a :href="`blog/` + service.href"
-                  ><img :src="service.image" class="w-full h-64 object-cover"
+                <a :href="`blog/` + item_blog.href"
+                  ><img :src="item_blog.image" class="w-full h-64 object-cover"
                 /></a>
               </div>
               <div class="p-6">
-                <p class="opacity-50">{{ service.date }}</p>
-                <a :href="`blog/` + service.href" class="font-bold text-lg">{{
-                  service.title
+                <p class="opacity-50">{{ item_blog.date }}</p>
+                <a :href="`blog/` + item_blog.href" class="font-bold text-lg">{{
+                  item_blog.title
                 }}</a>
                 <p class="text-gray-600 text-sm mt-2">
-                  {{ service.description }}
+                  {{ item_blog.description }}
                 </p>
                 <button
                   class="mt-4 bg-gray-200 text-orange-400 px-4 py-2 rounded-full text-sm hover:bg-white"
                 >
-                  <a :href="`blog/` + service.href">CONTINUE READING</a>
+                  <a :href="`blog/` + item_blog.href">CONTINUE READING</a>
                 </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button
+          @click="goToPage(currentPage - 1)"
+          :disabled="currentPage === 1"
+          class="px-4 py-2 mx-2 border rounded"
+        >
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button
+          v-for="page in visiblePages"
+          :key="page"
+          @click="typeof page === 'number' && goToPage(page)"
+          class="px-4 py-2 border rounded-md"
+          :class="{
+            'bg-gray-600 text-white': currentPage === page,
+            'cursor-not-allowed': page === '...',
+          }"
+        >
+          {{ page }}
+        </button>
+        <button
+          @click="goToPage(currentPage + 1)"
+          :disabled="currentPage === totalPages"
+          class="px-4 py-2 mx-2 border rounded"
+        >
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
       </div>
     </div>
 
@@ -62,65 +91,8 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
-import blog_img1 from "../assets/img/bg/blog1-img1.jpg";
-import blog_img2 from "../assets/img/bg/blog2.jpg";
-import blog_img3 from "../assets/img/bg/blog3.jpg";
-import blog_img4 from "../assets/img/bg/blog4.jpg";
-import blog_img5 from "../assets/img/bg/blog5.jpg";
-import blog_img6 from "../assets/img/bg/blog6.jpg";
 import { RouterView } from "vue-router";
-
-const services = ref([
-  {
-    href: "info_blog1",
-    date: "21 Feb 2025",
-    title: " Xu hướng diện đồ đôi mẹ và bé : Tăng sự gắn kết, tạo kỷ niệm đẹp ",
-    description:
-      "Bạn đã bao giờ thử diện đồ đôi cùng bé yêu chưa? Không chỉ là xu hướng thời trang hot hit, đồ đôi mẹ và bé còn là cách tuyệt vời để tăng sự gắn kết và lưu giữ những kỷ niệm đáng nhớ....",
-    image: blog_img1,
-  },
-  {
-    href: "info_blog2",
-    date: "16 Feb 2025",
-    title: "Quần áo gia công – Giải pháp tối ưu cho thương hiệu thời trang",
-    description:
-      "Trong xu hướng thời trang hiện đại, việc gia công quần áo đang trở thành giải pháp tối ưu cho nhiều doanh nghiệp, shop thời trang và startup...",
-    image: blog_img2,
-  },
-  {
-    href: "info_blog3",
-    date: "21 jan 2025",
-    title: "The Benefits of Fast Fashion: Style at Lightning Speed",
-    description:
-      "Fast fashion has transformed the way you purchase and dress, making fashionable clothing more affordable than ever. So, what makes it s...",
-    image: blog_img3,
-  },
-  {
-    href: "info_blog4",
-    date: "01 Feb 2025",
-    title: "Cost to Start a Swimwear Line: Complete Guide for Beginners",
-    description:
-      "Starting your own swimwear line can be an exciting venture, but understanding the cost to start a swimwear line is essential for succes...",
-    image: blog_img4,
-  },
-  {
-    href: "info_blog5",
-    date: "21 Feb 2025",
-    title:
-      "What is a Trucker Hat And Why it’s Back? Everything You Need to Know",
-    description:
-      "Have you ever wondered what a trucker hat is and why trucker hats evolved from freebies to high-end fashion essentials? Whether you wer...",
-    image: blog_img5,
-  },
-  {
-    href: "info_blog6",
-    date: "21 Feb 2025",
-    title: "Sweater vs Sweatshirt: A Guide To Key Differences!",
-    description:
-      "Have you ever considered what truly separates a sweater from a sweatshirt? This question is frequently asked in the fashion industry an..",
-    image: blog_img6,
-  },
-]);
+import { blogs } from "../js/blogData.js";
 
 const itemsPerSlide = () => {
   if (screenWidth.value >= 1024) return 3;
@@ -129,10 +101,6 @@ const itemsPerSlide = () => {
 };
 
 const screenWidth = ref(window.innerWidth);
-
-const totalSlides = computed(() =>
-  Math.ceil(services.value.length / itemsPerSlide())
-);
 
 const updateScreenWidth = () => {
   screenWidth.value = window.innerWidth;
@@ -144,6 +112,44 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("resize", updateScreenWidth);
+});
+
+const currentPage = ref(1);
+const itemsPerPage = 6;
+const totalPages = computed(() => Math.ceil(blogs.value.length / itemsPerPage));
+const paginatedBlogs = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  return blogs.value.slice(start, start + itemsPerPage);
+});
+
+const goToPage = (page) => {
+  currentPage.value = page;
+};
+
+const visiblePages = computed(() => {
+  const pages = [];
+  const total = totalPages.value;
+  const current = currentPage.value;
+
+  if (total <= 3) {
+    // Nếu tổng số trang nhỏ hơn hoặc bằng 4, hiển thị tất cả
+    for (let i = 1; i <= total; i++) pages.push(i);
+  } else {
+    pages.push(1); // Luôn hiển thị trang 1
+
+    if (current > 3) pages.push("..."); // Dấu "..." nếu trang hiện tại lớn hơn 3
+
+    // Hiển thị trang trước, hiện tại và sau nó
+    let start = Math.max(2, current - 1);
+    let end = Math.min(total - 1, current + 1);
+    for (let i = start; i <= end; i++) pages.push(i);
+
+    if (current < total - 2) pages.push("..."); // Dấu "..." nếu chưa gần trang cuối
+
+    pages.push(total); // Luôn hiển thị trang cuối
+  }
+
+  return pages;
 });
 </script>
 

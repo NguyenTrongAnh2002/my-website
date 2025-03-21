@@ -10,7 +10,7 @@
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <div
-          v-for="(service, index) in limitedServices"
+          v-for="(item_blog, index) in limitedBlogs"
           :key="index"
           class="flex-shrink-0 p-4"
           :class="{
@@ -20,11 +20,11 @@
           }"
         >
           <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img :src="service.image" class="w-full h-64 object-cover" />
+            <img :src="item_blog.image" class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="font-bold text-lg">{{ service.title }}</h3>
+              <h3 class="font-bold text-lg">{{ item_blog.title }}</h3>
               <p class="text-gray-600 text-sm mt-2">
-                {{ service.description }}
+                {{ item_blog.description }}
               </p>
               <button
                 class="mt-4 bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800"
@@ -45,7 +45,7 @@
       <i class="fa-solid fa-angle-left"></i>
     </button>
     <button
-      v-if="currentIndex < limitedServices.length / itemsPerSlide() - 1"
+      v-if="currentIndex < limitedBlogs.length / itemsPerSlide() - 1"
       @click="next"
       class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full"
     >
@@ -70,9 +70,9 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import { services } from "../js/blogData";
+import { blogs } from "../js/blogData";
 
-const limitedServices = computed(() => services.value.slice(0, 6));
+const limitedBlogs = computed(() => blogs.value.slice(0, 6));
 const currentIndex = ref(0);
 
 const itemsPerSlide = () => {
@@ -84,7 +84,7 @@ const itemsPerSlide = () => {
 const screenWidth = ref(window.innerWidth);
 
 const totalSlides = computed(() =>
-  Math.ceil(limitedServices.value.length / itemsPerSlide())
+  Math.ceil(limitedBlogs.value.length / itemsPerSlide())
 );
 
 const next = () => {
