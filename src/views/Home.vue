@@ -112,7 +112,7 @@ onUnmounted(() => {
             Premier Clothing Manufacturers Shaping Trends Beyond Fashion
           </h2>
           <p class="text-lg text-gray-600 mb-6">
-            Affix Apparel is a leading made-to-order clothing manufacturer,
+            LiShin Global is a leading made-to-order clothing manufacturer,
             specializing in private-label solutions that help brands showcase
             their unique identity. With a focus on quality and innovation, we
             turn your ideas into custom clothing that resonates with your target
@@ -143,7 +143,7 @@ onUnmounted(() => {
             Our Full Range of Services as a Custom Clothing Manufacturer!
           </h1>
           <p class="text-base pt-4">
-            At Affix Apparel, we provide a complete range of services as a
+            At LiShin Global, we provide a complete range of services as a
             custom apparel factory, from idea to shipment. Our team of custom
             clothes manufacturers offers design, production, and customization
             services by professionals to make your brand noticeable.
@@ -180,7 +180,7 @@ onUnmounted(() => {
             Business: How We Make Your Clothes?
           </h2>
           <p class="mt-4 text-lg">
-            Creating custom clothing with Affix Apparel is effortless and
+            Creating custom clothing with LiShin Global is effortless and
             seamless. Our custom clothing manufacturers in the USA guide you
             through each step, from material selection to design finalization,
             ensuring the product aligns with your brand’s vision. We start by
@@ -188,7 +188,7 @@ onUnmounted(() => {
             mockups for approval. Once confirmed, we produce samples to ensure
             the final product meets your expectations. After sample approval, we
             begin manufacturing, ensuring top-notch quality and consistency at
-            every stage of production. Affix Apparel makes the production
+            every stage of production. LiShin Global makes the production
             process of custom clothing for small businesses easy and reliable.
           </p>
           <p class="mt-4 text-lg">
@@ -260,7 +260,7 @@ onUnmounted(() => {
         <div class="lg:w-1/3 text-center mx-auto">
           <h2 class="text-2xl md:text-5xl font-bold leading-tight">
             Experience the Quality Difference With
-            <span class="text-orange-500">Affix Apparel!</span>
+            <span class="text-orange-500">LiShin Global!</span>
           </h2>
 
           <div
@@ -288,7 +288,7 @@ onUnmounted(() => {
             Why We're Your Partner of Choice?
           </h2>
           <p>
-            Affix Apparel is dedicated to outstanding quality in our products.
+            LiShin Global is dedicated to outstanding quality in our products.
             You can rest assured that each stitch produced by our custom apparel
             manufacturers USA reflects our commitment to excellence. Allow our
             knowledge to enhance your brand throughout every stage.
@@ -302,7 +302,7 @@ onUnmounted(() => {
                 <div class="text-left my-10">
                   <strong>1.Customized Solutions for Brands</strong>
                   <p class="mt-3">
-                    Affix Apparel is committed to exceptional craftsmanship. You
+                    LiShin Global is committed to exceptional craftsmanship. You
                     can be assured that every stitch we make in our custom
                     apparel factory is a testament to our excellence. Let our
                     expertise and precision elevate your brand from concept to

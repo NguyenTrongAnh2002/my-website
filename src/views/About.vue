@@ -410,11 +410,11 @@ const contents = ref([
           drive traffic to your website.
         </p>
         <p class="text-lg text-gray-600 mb-6 list-disc ps-8">
-          For your clothing brand, Affix Apparel has the expertise, experience,
+          For your clothing brand, LiShin Global has the expertise, experience,
           and capabilities to effectively manage social media marketing. We have
           an in-house team of skilled digital marketers who have helped us
           market more than 100 clothing brands that have manufactured their
-          products with us. Besides manufacturing, Affix apparel can also serve
+          products with us. Besides manufacturing, LiShin Global can also serve
           as your marketing partners which can help you get ahead in the
           competitive fashion industry.
         </p>

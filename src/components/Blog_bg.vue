@@ -9,7 +9,7 @@
           <span class="text-xs font-bold"><a href="/">HOME</a></span>
           <span class="text-xs font-bold ms-3">/</span>
           <span class="text-xs font-bold ms-3"
-            ><a class="text-white" href="/blog">CUSTOM AFFIX APPAREL</a></span
+            ><a class="text-white" href="/blog">CUSTOM LISHIN GLOBAL</a></span
           >
         </div>
       </div>
