@@ -80,19 +80,17 @@
 
 <script setup>
 import { ref } from "vue";
-import logo_footer from "../assets/img/logo/logo.png";
 import logo_visa from "../assets/img/logo/logo-visa.png";
 import logo_mastercard from "../assets/img/logo/logo-mastercard.png";
 import logo_paypal from "../assets/img/logo/logo-paypal.png";
 import logo_discover from "../assets/img/logo/logo-discover.png";
 
 const quickLinks = ref([
-  { name: "Home", href: "#" },
-  { name: "Contact Us", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Customization", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
   { name: "Who We Are", href: "#" },
   { name: "FAQ's", href: "#" },
-  { name: "Start A Successful Clothing Line", href: "#" },
 ]);
 </script>

@@ -1,6 +1,6 @@
 import { ref } from "vue";
-import blog_img1 from "../assets/img/bg/blog1-img1.jpg";
-import blog_img2 from "../assets/img/bg/blog2.jpg";
+import blog1_img1 from "../assets/img/bg/blog1-img1.jpg";
+import blog2_img1 from "../assets/img/bg/blog2-img1.jpg";
 import blog_img3 from "../assets/img/bg/blog3.jpg";
 import blog_img4 from "../assets/img/bg/blog4.jpg";
 import blog_img5 from "../assets/img/bg/blog5.jpg";
@@ -19,15 +19,15 @@ export const blogs = ref([
     title: " Xu hướng diện đồ đôi mẹ và bé : Tăng sự gắn kết, tạo kỷ niệm đẹp ",
     description:
       "Bạn đã bao giờ thử diện đồ đôi cùng bé yêu chưa? Không chỉ là xu hướng thời trang hot hit, đồ đôi mẹ và bé còn là cách tuyệt vời để tăng sự gắn kết và lưu giữ những kỷ niệm đáng nhớ....",
-    image: blog_img1,
+    image: blog1_img1,
   },
   {
     href: "info_blog2",
     date: "16 Feb 2025",
-    title: "Quần áo gia công – Giải pháp tối ưu cho thương hiệu thời trang",
+    title: "Xu Hướng Thời Trang 2025: Phong Cách Nào Sẽ Lên Ngôi?",
     description:
-      "Trong xu hướng thời trang hiện đại, việc gia công quần áo đang trở thành giải pháp tối ưu cho nhiều doanh nghiệp, shop thời trang và startup...",
-    image: blog_img2,
+      "Thời trang không chỉ là cách ăn mặc, mà còn là tuyên ngôn về phong cách sống, cá tính và xu hướng của thời đại....",
+    image: blog2_img1,
   },
   {
     href: "info_blog3",

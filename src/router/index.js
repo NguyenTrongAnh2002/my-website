@@ -8,7 +8,11 @@ import Info_blog1 from "../views/Info_blog1.vue";
 import Info_blog2 from "../views/Info_blog2.vue";
 
 const routes = [
-  { path: "/", component: Home, meta: { title: "HOME " } },
+  {
+    path: "/",
+    component: Home,
+    meta: { title: "HOME " },
+  },
   {
     path: "/about",
     component: About,

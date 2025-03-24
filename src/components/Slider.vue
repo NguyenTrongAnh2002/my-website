@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full max-w-6xl mx-auto my-16 px-4">
     <h2 class="text-center text-3xl font-bold mb-8">
-      A Dig into Limitless Possibilities of Our Customization Options!
+      Explore our latest blog posts!
     </h2>
 
     <div class="overflow-hidden relative">
@@ -29,7 +29,7 @@
               <button
                 class="mt-4 bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800"
               >
-                Learn More
+                <a :href="`blog/` + item_blog.href">Read Now</a>
               </button>
             </div>
           </div>
