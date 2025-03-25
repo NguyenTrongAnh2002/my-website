@@ -3,7 +3,7 @@
     v-if="isOpen"
     class="fixed inset-0 z-30 bg-black bg-opacity-50 flex items-center justify-center"
   >
-    <div class="flex bg-white p-6 rounded-lg w-3/4 relative">
+    <div class="flex bg-white p-6 rounded-lg w-11/12 lg:w-1/2 relative">
       <div class="w-full p-4">
         <button
           @click="$emit('close-form')"

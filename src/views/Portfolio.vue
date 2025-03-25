@@ -25,9 +25,10 @@ import anh16 from "../assets/img/product/portfolio-16.jpg";
 const backgrounds = ref([heroBg_portfolio]);
 const contents = ref([
   {
-    title: "",
-    description: "",
-    buttonText: "",
+    title: "OUR PORTFOLIO",
+    description:
+      "Our portfolio showcases some of our works and images shared with us by our clients whom we have helped for production and the capabilities of our factories.",
+    buttonText: "INQUIRE NOW",
   },
 ]);
 
@@ -83,6 +84,6 @@ const products = ref([
 </template>
 <style>
 .bg-portfolio .hero-content {
-  display: none;
+  color: black;
 }
 </style>

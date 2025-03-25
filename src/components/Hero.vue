@@ -1,5 +1,6 @@
 <template>
   <div
+    :key="currentIndex"
     class="relative h-[30vh] md:h-[80vh] sm:h-[60vh] flex items-center text-center bg-cover bg-center transition-all duration-700 mt-20 overflow-hidden"
     :style="{ backgroundImage: `url(${backgrounds[currentIndex]})` }"
   >
@@ -85,19 +86,22 @@ const prevBackground = () => {
   currentIndex.value =
     (currentIndex.value - 1 + backgrounds.value.length) %
     backgrounds.value.length;
+  startAutoSlide();
 };
 
 const nextBackground = () => {
   currentIndex.value = (currentIndex.value + 1) % backgrounds.value.length;
+  startAutoSlide();
 };
 
 const screenWidth = ref(window.innerWidth);
 
 let intervalId = null;
 const startAutoSlide = () => {
+  clearInterval(intervalId);
   intervalId = setInterval(() => {
     currentIndex.value = (currentIndex.value + 1) % backgrounds.value.length;
-  }, 5000);
+  }, 6000);
 };
 // Theo dõi thay đổi kích thước màn hình
 const updateScreenWidth = () => {
@@ -133,6 +137,35 @@ section {
   button,
   p {
     display: none;
+  }
+}
+
+.hero-content h1 {
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.hero-content p {
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.hero-content button {
+  animation-name: moveLeft;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+@keyframes moveLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 </style>

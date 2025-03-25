@@ -4,6 +4,7 @@ import About from "../views/About.vue";
 import Portfolio from "../views/Portfolio.vue";
 import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
+import Process from "../views/Process.vue";
 import Info_blog1 from "../views/Info_blog1.vue";
 import Info_blog2 from "../views/Info_blog2.vue";
 
@@ -46,6 +47,11 @@ const routes = [
     path: "/contact",
     component: Contact,
     meta: { title: "CONTACT" },
+  },
+  {
+    path: "/process",
+    component: Process,
+    meta: { title: "PROCESS" },
   },
 ];
 

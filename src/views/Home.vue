@@ -127,7 +127,7 @@ onUnmounted(() => {
             GET IN TOUCH
           </button>
           <a
-            href="/about"
+            href="/process"
             class="text-black px-6 py-3 ms-4 mt-3 border border-black rounded-lg text-lg hover:bg-black hover:text-white inline-block"
           >
             HOW TO START A BRAND
