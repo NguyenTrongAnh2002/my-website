@@ -7,8 +7,10 @@
         <h1 class="text-2xl md:text-6xl">Blog</h1>
         <div class="mt-5">
           <span class="text-xs font-bold"><a href="/">HOME</a></span>
-          <span class="text-xs font-bold ms-3">/</span>
-          <span class="text-xs font-bold ms-3"
+          <span class="text-xs font-bold ms-2"
+            ><i class="fa-solid fa-angles-right"></i
+          ></span>
+          <span class="text-xs font-bold ms-2"
             ><a class="text-white" href="/blog">CUSTOM LISHIN GLOBAL</a></span
           >
         </div>

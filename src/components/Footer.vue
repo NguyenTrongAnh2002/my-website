@@ -90,7 +90,6 @@ const quickLinks = ref([
   { name: "Contact Us", href: "/contact" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
-  { name: "Who We Are", href: "#" },
   { name: "FAQ's", href: "#" },
 ]);
 </script>

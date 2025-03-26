@@ -3,6 +3,7 @@ import { ref } from "vue";
 import HeroComponent from "../components/Hero.vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
+import RequestForm from "../components/RequestForm.vue";
 
 import heroBg_portfolio from "../assets/img/bg/bg-portfolio.jpg";
 import anh1 from "../assets/img/product/portfolio-1.jpg";
@@ -22,6 +23,7 @@ import anh14 from "../assets/img/product/portfolio-14.jpg";
 import anh15 from "../assets/img/product/portfolio-15.jpg";
 import anh16 from "../assets/img/product/portfolio-16.jpg";
 
+const openForm = ref(false);
 const backgrounds = ref([heroBg_portfolio]);
 const contents = ref([
   {
@@ -73,6 +75,7 @@ const products = ref([
         DIRECTLY AND WE WILL BE HAPPY TO ASSIST YOU!
       </h1>
       <button
+        @click="openForm = true"
         class="mt-14 border border-black px-4 py-2 hover:bg-black hover:text-white transition"
       >
         REQUEST YOUR FREE CONSULTATION!
@@ -81,6 +84,7 @@ const products = ref([
   </div>
   <BrandComponent />
   <FooterComponent />
+  <RequestForm :isOpen="openForm" @close-form="openForm = false" />
 </template>
 <style>
 .bg-portfolio .hero-content {

@@ -6,7 +6,7 @@
     <button
       v-show="showScrollButton"
       @click="scrollToTop"
-      class="fixed bottom-6 right-6 bg-gray-600 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300"
+      class="fixed bottom-6 right-6 bg-gray-600 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-1000"
     >
       <i class="fa-solid fa-arrow-up text-xl"></i>
     </button>

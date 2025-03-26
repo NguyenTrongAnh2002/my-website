@@ -334,7 +334,7 @@ onUnmounted(() => {
                   <strong>4. Professionals at Your Service</strong>
                   <p class="mt-3">
                     Our tight-knit team of skilled and professional creators,
-                    like a dedicated family, is here to serve you. Trust Affix
+                    like a dedicated family, is here to serve you. Trust LiShin
                     to make your clothing designs, ensuring every seam and
                     design aligns seamlessly with your vision, fostering a
                     productive and robust working partnership.

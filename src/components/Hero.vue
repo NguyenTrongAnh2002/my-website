@@ -1,7 +1,7 @@
 <template>
   <div
     :key="currentIndex"
-    class="relative h-[30vh] md:h-[80vh] sm:h-[60vh] flex items-center text-center bg-cover bg-center transition-all duration-700 mt-20 overflow-hidden"
+    class="relative h-[30vh] md:h-[80vh] sm:h-[60vh] flex items-center text-center bg-cover bg-center transition-all duration-1000 mt-20 overflow-hidden"
     :style="{ backgroundImage: `url(${backgrounds[currentIndex]})` }"
   >
     <div
@@ -81,7 +81,7 @@ const backgrounds = computed(() => props.backgrounds || []);
 const contents = computed(() => props.contents || []);
 
 const currentIndex = ref(0);
-
+console.log(currentIndex.value);
 const prevBackground = () => {
   currentIndex.value =
     (currentIndex.value - 1 + backgrounds.value.length) %
