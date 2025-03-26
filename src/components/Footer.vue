@@ -4,8 +4,8 @@
       <div>
         <div class="mt-4 space-y-2 text-gray-400">
           <p>
-            <i class="fa-solid fa-phone" style="color: #ff5a3d"></i>(323)
-            713-0672
+            <i class="fa-solid fa-phone" style="color: #ff5a3d"></i>(098)
+            765-4321
           </p>
           <p>
             <i class="fa-solid fa-envelope" style="color: #11a7c5"></i>
@@ -90,6 +90,6 @@ const quickLinks = ref([
   { name: "Contact Us", href: "/contact" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
-  { name: "FAQ's", href: "#" },
+  { name: "FAQ's", href: "/faq" },
 ]);
 </script>

@@ -23,7 +23,7 @@
 .bg-blog {
   width: 100%;
   height: auto;
-  background-image: url("../assets/img/bg/cta-banner.jpg");
+  background-image: url("../assets/img/bg/bg-blog.jpg");
   background-size: cover;
   background-position: center;
 }

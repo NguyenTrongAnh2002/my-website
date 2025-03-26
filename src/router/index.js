@@ -5,6 +5,7 @@ import Portfolio from "../views/Portfolio.vue";
 import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
 import Process from "../views/Process.vue";
+import FAQ from "../views/FAQ.vue";
 import Info_blog1 from "../views/Info_blog1.vue";
 import Info_blog2 from "../views/Info_blog2.vue";
 
@@ -52,6 +53,11 @@ const routes = [
     path: "/process",
     component: Process,
     meta: { title: "PROCESS" },
+  },
+  {
+    path: "/faq",
+    component: FAQ,
+    meta: { title: "FAQ" },
   },
 ];
 

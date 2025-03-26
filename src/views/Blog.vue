@@ -10,7 +10,7 @@
       </div>
     </section>
 
-    <div class="relative w-full max-w-7xl mx-auto my-16 px-4">
+    <section class="relative w-full max-w-7xl mx-auto my-16 px-4">
       <div class="overflow-hidden relative">
         <div class="flex flex-wrap">
           <div
@@ -78,7 +78,7 @@
           <i class="fa-solid fa-angle-right"></i>
         </button>
       </div>
-    </div>
+    </section>
 
     <BrandComponent />
     <FooterComponent />
@@ -160,7 +160,7 @@ template {
 .bg-blog {
   width: 100%;
   height: auto;
-  background-image: url("../assets/img/bg/cta-banner.jpg");
+  background-image: url("../assets/img/bg/bg-blog.jpg");
   background-size: cover;
   background-position: center;
 }
