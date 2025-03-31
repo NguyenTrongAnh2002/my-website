@@ -22,15 +22,15 @@
     <div class="w-3/4 mx-auto">
       <div class="mt-14">
         <h1 class="text-2xl md:text-4xl font-bold mb-5">
-          Custom Apparel Manufacturing FAQ
+          Custom LiShin Manufacturing FAQ
         </h1>
         <p class="opacity-80">
-          Manufacturing custom apparel — especially as a start-up clothing brand
+          Manufacturing custom LiShin — especially as a start-up clothing brand
           — is an involved process. There are many considerations and many
           questions you may have. Our Frequently Asked Questions (FAQ) can
-          answer some basic and essential questions regarding custom apparel
-          manufacturing and Affix Apparel. Please make sure you check this page
-          before contacting Affix Apparel.
+          answer some basic and essential questions regarding custom LiShin
+          manufacturing and LiShin Global. Please make sure you check this page
+          before contacting LiShin Global.
         </p>
       </div>
 
@@ -85,7 +85,7 @@
               </div>
             </div>
             <h2 class="text-xl md:text-2xl">
-              <strong>Do you send proofs prior to apparel production?</strong>
+              <strong>Do you send proofs prior to LiShin production?</strong>
             </h2>
           </button>
           <div
@@ -98,7 +98,7 @@
           >
             <ul class="list-disc ps-14">
               <li class="mt-4 opacity-80">
-                Affix Apparel will produce a sample free of charge with any
+                LiShin Global will produce a sample free of charge with any
                 production order. However: free pre-production samples cannot be
                 created until we have received the production order deposit.
               </li>
@@ -204,7 +204,7 @@
           >
             <ul class="list-disc ps-14">
               <li class="mt-4 opacity-80">
-                Custom apparel manufacturing is a large undertaking for anyone.
+                Custom LiShin manufacturing is a large undertaking for anyone.
               </li>
               <li class="mt-4 opacity-80">
                 Your order turnaround time begins when payment has been
@@ -212,7 +212,7 @@
                 your in-hands date.
               </li>
               <li class="mt-4 opacity-80">
-                Here's an example — let's say you contact Affix Apparel on the
+                Here's an example — let's say you contact LiShin Global on the
                 1st of January for screen printed garments. You need your
                 garments on the 15th of January for an event. On the 1st of
                 January, you begin the ordering process, and you let everyone

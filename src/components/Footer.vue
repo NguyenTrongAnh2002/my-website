@@ -69,7 +69,7 @@
     <div
       class="border-t border-gray-700 mt-10 pt-4 text-center text-gray-400 text-sm"
     >
-      <p>Copyright by Nguyen Trong Anh 2025</p>
+      <p>Design by lishinglobal</p>
       <!-- <p>
         <a href="#" class="hover:text-white">Terms & Conditions</a> |
         <a href="#" class="hover:text-white">Privacy Policy</a>

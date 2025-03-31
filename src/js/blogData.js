@@ -16,17 +16,18 @@ export const blogs = ref([
   {
     href: "info_blog1",
     date: "21 Feb 2025",
-    title: " Xu hướng diện đồ đôi mẹ và bé : Tăng sự gắn kết, tạo kỷ niệm đẹp ",
+    title:
+      " Mother-child clothing trends: Increase bonding, create beautiful memories ",
     description:
-      "Bạn đã bao giờ thử diện đồ đôi cùng bé yêu chưa? Không chỉ là xu hướng thời trang hot hit, đồ đôi mẹ và bé còn là cách tuyệt vời để tăng sự gắn kết và lưu giữ những kỷ niệm đáng nhớ....",
+      "Have you ever tried wearing matching outfits with your baby? Not only is it a hot fashion trend, but matching outfits for mother and baby is also a great way to increase bonding and preserve memorable memories...",
     image: blog1_img1,
   },
   {
     href: "info_blog2",
     date: "16 Feb 2025",
-    title: "Xu Hướng Thời Trang 2025: Phong Cách Nào Sẽ Lên Ngôi?",
+    title: "Fashion Trends 2025: Which Style Will Dominate?",
     description:
-      "Thời trang không chỉ là cách ăn mặc, mà còn là tuyên ngôn về phong cách sống, cá tính và xu hướng của thời đại....",
+      "Fashion is not just a way of dressing, but also a statement of lifestyle, personality and trends of the times...",
     image: blog2_img1,
   },
   {

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { nextTick } from "vue";
 import BrandComponent from "../components/Brand.vue";
 import FooterComponent from "../components/Footer.vue";
 
@@ -9,9 +10,55 @@ const formData = ref({
   name: "",
   number: "",
   email: "",
-  contactMethod: "email",
+  preferred: "email",
   message: "",
 });
+
+const submitForm = async () => {
+  await nextTick();
+
+  const formDataToSend = new FormData();
+  formDataToSend.append("name", formData.value.name);
+  formDataToSend.append("number", "'" + formData.value.number);
+  formDataToSend.append("email", formData.value.email);
+  formDataToSend.append("preferred", formData.value.preferred);
+  formDataToSend.append("message", formData.value.message);
+  const timestamp = new Date().toLocaleString("vi-VN", {
+    timeZone: "Asia/Ho_Chi_Minh",
+  });
+  formDataToSend.append("timestamp", timestamp);
+
+  alert("Request sent! Please wait...");
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyVHptmgvdYmj85wBkeYT8ZJtXzyJ1L2aQz3kLBXoonGupyA9_5fo_5yo1GW0RmSCp0/exec",
+      {
+        method: "POST",
+        body: formDataToSend,
+      }
+    );
+
+    const result = await response.json();
+    console.log("Server response:", result);
+    if (result.status === "success") {
+      alert("Form submitted successfully!");
+      formData.value = {
+        name: "",
+        number: "",
+        email: "",
+        preferred: "email",
+        message: "",
+      };
+      return;
+    } else {
+      alert("Error: " + result.message);
+    }
+  } catch (error) {
+    alert("Failed to submit form.");
+    console.error(error);
+  }
+};
 </script>
 <template>
   <div class="contact-hero">
@@ -61,7 +108,7 @@ const formData = ref({
             <p class="mb-2">Preferred method of correspondence:</p>
             <label class="mr-4">
               <input
-                v-model="formData.contactMethod"
+                v-model="formData.preferred"
                 type="radio"
                 value="email"
                 name="contact"
@@ -71,18 +118,13 @@ const formData = ref({
             </label>
             <label>
               <input
-                v-model="formData.contactMethod"
+                v-model="formData.preferred"
                 type="radio"
                 value="call"
                 name="contact"
               />
               Via Call / SMS
             </label>
-          </div>
-
-          <div class="mt-4">
-            <p class="mb-2">Add any Attachments (if possible):</p>
-            <input type="file" class="border p-2 rounded w-full" />
           </div>
 
           <textarea

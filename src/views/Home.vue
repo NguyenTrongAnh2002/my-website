@@ -31,21 +31,20 @@ const openForm = ref(false);
 const backgrounds = ref([hero_bg1, hero_bg2, hero_bg3]);
 const contents = ref([
   {
-    title: "Xưởng May Chuyên Nghiệp",
+    title: "Professional Sewing Factory",
     description:
-      "Chúng tôi cung cấp dịch vụ may mặc chất lượng cao với giá cạnh tranh.",
-    buttonText: "Liên hệ ngay",
+      "We provide high-quality tailoring services at reasonable prices",
+    buttonText: "Contatc now",
   },
   {
-    title: "Thiết Kế Độc Đáo",
-    description: "Biến ý tưởng của bạn thành sản phẩm thời trang tuyệt vời.",
-    buttonText: "Khám phá ngay",
+    title: "Unique Design",
+    description: "Turn your ideas into amazing fashion products.",
+    buttonText: "Explore Now",
   },
   {
-    title: "Sản Xuất Số Lượng Lớn",
-    description:
-      "Đáp ứng đơn hàng lớn với thời gian nhanh chóng và chất lượng cao.",
-    buttonText: "Bắt đầu ngay",
+    title: "Mass production",
+    description: "Meet large orders with fast time and high quality",
+    buttonText: "Get Started now",
   },
 ]);
 
@@ -56,23 +55,23 @@ const services = ref([
     image: wrapper2_1,
   },
   {
-    title: "T-Shirt Manufacturing",
+    title: "Custom Jeans Manufacturer",
     image: wrapper2_2,
   },
   {
-    title: "Private Label & Branding",
+    title: "Leggings Manufacturer",
     image: wrapper2_3,
   },
   {
-    title: "Private Label & Branding",
+    title: "Custom Leather Goods",
     image: wrapper2_4,
   },
   {
-    title: "Private Label & Branding",
+    title: "Custom Bra Manufacturer",
     image: wrapper2_5,
   },
   {
-    title: "Private Label & Branding",
+    title: "Hat Manufacturer",
     image: wrapper2_6,
   },
 ]);
@@ -407,11 +406,14 @@ onUnmounted(() => {
 }
 .service-content {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
   padding: 20px;
   border-radius: 5px;
 }

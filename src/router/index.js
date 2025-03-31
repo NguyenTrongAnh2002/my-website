@@ -6,19 +6,19 @@ import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
 import Process from "../views/Process.vue";
 import FAQ from "../views/FAQ.vue";
-import Info_blog1 from "../views/Info_blog1.vue";
-import Info_blog2 from "../views/Info_blog2.vue";
+import Info_blog1 from "../blogDetail/Info_blog1.vue";
+import Info_blog2 from "../blogDetail/Info_blog2.vue";
 
 const routes = [
   {
     path: "/",
     component: Home,
-    meta: { title: "HOME " },
+    meta: { title: "LiShin Global" },
   },
   {
     path: "/about",
     component: About,
-    meta: { title: "ABOUT" },
+    meta: { title: "ABOUT US" },
   },
   {
     path: "/portfolio",
@@ -28,19 +28,19 @@ const routes = [
   {
     path: "/blog",
     component: Blog,
-    meta: { title: "BLOG " },
+    meta: { title: "BLOG" },
     children: [
       {
         path: "info_blog1",
         name: "info_blog1",
         component: Info_blog1,
-        meta: { title: "Đồ đôi mẹ và bé" },
+        meta: { title: "Mother and Child couple clothes" },
       },
       {
         path: "info_blog2",
         name: "info_blog2",
         component: Info_blog2,
-        meta: { title: "Quần áo gia công" },
+        meta: { title: "Style Will Dominate" },
       },
     ],
   },
