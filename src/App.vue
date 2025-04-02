@@ -19,7 +19,7 @@
         <div
           class="bg-blue-500 text-white p-3 flex justify-between items-center rounded-t-lg"
         >
-          <span>Chat với chúng tôi</span>
+          <span>Chat with Us</span>
           <button @click="toggleChat" class="text-white">✖</button>
         </div>
         <div
@@ -44,13 +44,13 @@
             v-model="newMessage"
             @keyup.enter="sendMessage"
             class="flex-1 p-2 border rounded-lg"
-            placeholder="Nhập tin nhắn..."
+            placeholder="Enter message..."
           />
           <button
             @click="sendMessage"
             class="bg-blue-500 text-white px-3 py-1 ml-2 rounded-lg"
           >
-            Gửi
+            Send
           </button>
         </div>
       </div>
@@ -133,6 +133,9 @@ const sendMessage = async () => {
     messages.value.push({ text: newMessage.value, sender: "user" });
     newMessage.value = "";
 
+    await nextTick(); // Chờ DOM cập nhật xong
+    scrollToBottom();
+
     // Gửi tin nhắn đến Webhook
     try {
       const response = await fetch(
@@ -157,22 +160,29 @@ const sendMessage = async () => {
       } else {
         // Trường hợp không có trả lời
         messages.value.push({
-          text: "Xin lỗi, tôi không thể trả lời lúc này.",
+          text: "Sorry, I can't answer right now.",
           sender: "bot",
         });
       }
     } catch (error) {
-      console.error("Lỗi khi gửi tin nhắn:", error);
-      messages.value.push({
-        text: "Có lỗi xảy ra. Vui lòng thử lại.",
-        sender: "bot",
-      });
+      if (messages.value.length == 1) {
+        setTimeout(() => {
+          messages.value.push({
+            text: "Hello, thank you for messaging us, if you have any requests, just tell us, we will reply as soon as possible.",
+            sender: "bot",
+          });
+        }, 2000);
+      }
+      // console.error("Lỗi khi gửi tin nhắn:", error);
+      // messages.value.push({
+      //   text: "An error occurred, please try again.",
+      //   sender: "bot",
+      // });
     }
 
     // Cuộn xuống dưới cùng sau khi nhận được tin nhắn trả lời
-    nextTick(() => {
-      scrollToBottom();
-    });
+    await nextTick(); // Chờ Vue cập nhật DOM
+    scrollToBottom(); // Cuộn xuống cuối
   }
 };
 
