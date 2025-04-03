@@ -14,12 +14,15 @@
     <div class="fixed z-50 bottom-4 left-4">
       <div
         v-if="isOpen"
-        class="w-80 h-96 bg-white shadow-lg rounded-lg flex flex-col"
+        class="w-96 h-[500px] bg-white shadow-lg rounded-lg flex flex-col"
       >
         <div
           class="bg-blue-500 text-white p-3 flex justify-between items-center rounded-t-lg"
         >
-          <span>Chat with Us</span>
+          <div class="flex items-center gap-3">
+            <img :src="logo" alt="" class="w-10 h-5 rounded-full" />
+            <span class="font-semibold">Chat with Us</span>
+          </div>
           <button @click="toggleChat" class="text-white">✖</button>
         </div>
         <div
@@ -59,7 +62,7 @@
         @click="toggleChat"
         class="bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg"
       >
-        💬
+        <i class="fa-solid fa-comment"></i>
       </button>
     </div>
   </div>
@@ -68,6 +71,7 @@
 <script setup>
 import { ref, nextTick, onMounted, onUnmounted } from "vue";
 import Navbar from "./components/Header.vue";
+import logo from "./assets/img/logo/logo.png";
 
 const showScrollButton = ref(false);
 let scrollTimeout = null;
@@ -129,6 +133,8 @@ const toggleChat = () => {
 const sendMessage = async () => {
   if (newMessage.value.trim()) {
     const userMessage = newMessage.value;
+    const messageID = messages.value.length;
+    console.log(messageID);
     // Thêm tin nhắn của người dùng vào chatbox
     messages.value.push({ text: newMessage.value, sender: "user" });
     newMessage.value = "";
@@ -146,6 +152,8 @@ const sendMessage = async () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            messageID: messageID,
+            sender: "user",
             message: userMessage,
             href: "https://www.lishinglobal.net",
           }),
