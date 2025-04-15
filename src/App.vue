@@ -20,7 +20,7 @@
           class="bg-blue-500 text-white p-3 flex justify-between items-center rounded-t-lg"
         >
           <div class="flex items-center gap-3">
-            <img :src="logo" alt="" class="w-10 h-5 rounded-full" />
+            <img :src="logo" alt="" class="h-10" />
             <span class="font-semibold">Chat with Us</span>
           </div>
           <button @click="toggleChat" class="text-white">✖</button>

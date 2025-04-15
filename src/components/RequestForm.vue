@@ -26,14 +26,25 @@
               />
             </div>
             <div>
-              <label>Number</label>
-              <input
-                v-model="formData.number"
-                type="text"
-                placeholder="Phone Number"
-                required
-                class="border p-2 rounded w-full"
-              />
+              <label>Phone</label>
+              <div class="flex">
+                <select
+                  v-model="formData.countryCode"
+                  class="border border-gray-300 rounded-l-lg p-2 bg-white text-sm"
+                >
+                  <option value="+84">VN +84</option>
+                  <option value="+1">US +1</option>
+                  <option value="+61">AU +61</option>
+                  <option value="+81">JP +81</option>
+                </select>
+                <input
+                  v-model="formData.number"
+                  type="text"
+                  placeholder="Phone Number"
+                  required
+                  class="border p-2 rounded w-full"
+                />
+              </div>
             </div>
           </div>
           <div class="mt-4">
@@ -98,6 +109,7 @@ const emit = defineEmits(["close-form"]);
 const formData = ref({
   name: "",
   number: "",
+  countryCode: "+1",
   email: "",
   preferred: "email",
   message: "",
@@ -108,7 +120,8 @@ const submitForm = async () => {
 
   const formDataToSend = new FormData();
   formDataToSend.append("name", formData.value.name);
-  formDataToSend.append("number", "'" + formData.value.number);
+  formDataToSend.append("number", formData.value.number);
+  formDataToSend.append("countryCode", "'" + formData.value.countryCode);
   formDataToSend.append("email", formData.value.email);
   formDataToSend.append("preferred", formData.value.preferred);
   formDataToSend.append("message", formData.value.message);
@@ -135,6 +148,7 @@ const submitForm = async () => {
       formData.value = {
         name: "",
         number: "",
+        countryCode: "+1",
         email: "",
         preferred: "email",
         message: "",

@@ -7,7 +7,7 @@
     >
       <div>
         <a href="/">
-          <img :src="logo_header" alt="LiShin Global Logo" class="h-18" />
+          <img :src="logo_header" alt="LiShin Global Logo" class="h-24" />
         </a>
       </div>
 
