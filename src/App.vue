@@ -145,7 +145,7 @@ const sendMessage = async () => {
     // Gửi tin nhắn đến Webhook
     try {
       const response = await fetch(
-        "https://tronganh.app.n8n.cloud/webhook/chatbox-lishin",
+        "https://bright02.app.n8n.cloud/webhook/chatbot-lishin",
         {
           method: "POST",
           headers: {
