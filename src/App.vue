@@ -130,9 +130,19 @@ const toggleChat = () => {
 //   }
 // };
 
+const getOrCreateSenderId = () => {
+  let senderId = localStorage.getItem("senderId");
+  if (!senderId) {
+    senderId = "user_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
+    localStorage.setItem("senderId", senderId);
+  }
+  return senderId;
+};
+
 const sendMessage = async () => {
   if (newMessage.value.trim()) {
     const link_web = "https://www.lishinglobal.net";
+    const senderId = getOrCreateSenderId();
     const userMessage = newMessage.value;
     const messageID = messages.value.length;
     console.log(messageID);
@@ -153,6 +163,7 @@ const sendMessage = async () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            senderId,
             messageID: messageID,
             sender: "user",
             message: userMessage,
