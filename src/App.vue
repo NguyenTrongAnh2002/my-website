@@ -132,6 +132,7 @@ const toggleChat = () => {
 
 const sendMessage = async () => {
   if (newMessage.value.trim()) {
+    const link_web = "https://www.lishinglobal.net";
     const userMessage = newMessage.value;
     const messageID = messages.value.length;
     console.log(messageID);
@@ -145,7 +146,7 @@ const sendMessage = async () => {
     // Gửi tin nhắn đến Webhook
     try {
       const response = await fetch(
-        "https://bright02.app.n8n.cloud/webhook/chatbot-lishin",
+        "https://n8n-vietmerch.tino.page/webhook/chatbot-lishin",
         {
           method: "POST",
           headers: {
@@ -155,7 +156,7 @@ const sendMessage = async () => {
             messageID: messageID,
             sender: "user",
             message: userMessage,
-            href: "https://www.lishinglobal.net",
+            href: link_web,
           }),
         }
       );
